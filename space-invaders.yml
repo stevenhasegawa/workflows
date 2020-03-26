@@ -1,0 +1,15 @@
+version: v2
+description: Slack
+
+steps:
+- name: slack-notification
+  image: projectnebula/slack-notification
+  spec:
+    apitoken:
+      $type: Secret
+      name: slack-token
+    channel: "#nebula-workflows"
+    message: |
+      :penguin_dance: 
+       
+      Test!
